@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#big-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none; /* Set to "flex" when game is started */
+    flex-direction: row;
+}
+
+#main-ui-container {
+    padding-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+
+    background-color: lightgray;
+}
+
+#ui-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin-right: 10px;
+}
+
+#target-word-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.target-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+
+    background-color: darkgray;
+
+    text-align: center;
+    font-size: clamp(15px, 2vw, 30px);
+    font-family: "Archivo Black", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 1px 1px 10px white;
+}
+
+.target-letter:last-child {
+    margin-right: 0px;
+}
+
+.target-letter-g {
+    background-color: rgb(255, 183, 0);
+}
+
+.target-letter-f {
+    background-color: skyblue !important;
+}
+
+.center-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#word-input {
+    width: 60%;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#options-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    margin-right: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.btn-disabled {
+    cursor: auto;
+}
+
+.btn:last-child {
+    margin-right: 0px;
+}
+
+#reshuffle {
+    background-color: lightsalmon;
+}
+
+#give-up {
+    background-color: skyblue;
+}
+
+#new-word {
+    background-color: plum;
+}
+
+#btn-start {
+    background-color: lightgreen;
+}
+
+#word-list-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+    min-height: 100%;
+    border: none;
+    border-radius: 10px;
+
+    background-color: lightgray;
+}
+
+#word-list-title {
+    position: relative;
+    width: 90%;
+    max-height: max-content;
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#word-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.word-list-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 16vw;
+    margin-bottom: 3px;
+}
+
+.found-word {
+    margin: 0px;
+
+    text-align: left !important;
+}
+
+#alert-msg {
+    text-align: center;
+}
+
+#home-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 50vw;
+}
+
+#special-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 30px 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+#menu-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#target-word-ui-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+
+    background-color: lightgray;
+}
+
+#score {
+    margin-bottom: 5px !important;
+
+    text-align: center;
+}
+
+#version {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    display: block;
+    margin: 0px 10px 10px 0px;
+}

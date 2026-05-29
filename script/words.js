@@ -1,0 +1,101 @@
+const words = [
+    "abacus", "absent", "absorb", "accent", "accept", "access", "accuse", "acetyl", 
+    "across", "acting", "action", "active", "actors", "actual", "adhere", "adjust", 
+    "admire", "admit", "advice", "advise", "affair", "affect", "afford", "afraid", 
+    "agency", "agenda", "agents", "agreed", "albedo", "albeit", "albino", "alkali", 
+    "allied", "almost", "alumni", "always", "amazon", "ambush", "amount", "anchor", 
+    "angels", "animal", "annual", "answer", "anyone", "anyway", "appeal", "appear", 
+    "arctic", "around", "arrest", "arrive", "artist", "aspect", "assess", "assist", 
+    "assume", "assure", "attack", "attend", "august", "author", "avenue", "babies", 
+    "backed", "badger", "bakery", "ballot", "banana", "banker", "banner", "barely", 
+    "barrel", "basket", "battle", "beauty", "became", "become", "before", "behalf", 
+    "behind", "belief", "belong", "berths", "beside", "better", "beyond", "bishop", 
+    "bitter", "blamed", "blazer", "blocks", "blonde", "bloody", "bodily", "border", 
+    "borrow", "bottle", "bottom", "bought", "bounce", "branch", "breach", "breath", 
+    "bridge", "bright", "broken", "budget", "burden", "bureau", "burial", "busily", 
+    "butter", "button", "camera", "campus", "cancel", "cancer", "cannot", "canvas", 
+    "canyon", "carbon", "career", "castle", "casual", "caught", "causal", "census", 
+    "center", "centre", "chance", "change", "chapel", "charge", "cheese", "cherry", 
+    "choice", "choose", "church", "circle", "circus", "clause", "clever", "client", 
+    "clinic", "closed", "closer", "coffee", "column", "combat", "comedy", "coming", 
+    "common", "comply", "convey", "copper", "corner", "costly", "county", "couple", 
+    "course", "covers", "create", "credit", "crisis", "custom", "damage", "danger", 
+    "dealer", "debate", "decade", "decide", "defeat", "defend", "define", "degree", 
+    "demand", "depend", "deputy", "desert", "design", "desire", "detail", "detect", 
+    "device", "differ", "dinner", "direct", "doctor", "dollar", "domain", "double", 
+    "driven", "driver", "during", "easily", "eating", "editor", "effect", "effort", 
+    "eighth", "either", "eleven", "emerge", "empire", "employ", "enable", "ending", 
+    "energy", "engage", "engine", "enough", "ensure", "entire", "entity", "equity", 
+    "escape", "estate", "events", "evolve", "exceed", "except", "excess", "expand", 
+    "expect", "expert", "export", "extend", "extent", "fabric", "facing", "factor", 
+    "failed", "fairly", "fallen", "family", "famous", "father", "fellow", "female", 
+    "figure", "filing", "finger", "finish", "fiscal", "flight", "flying", "follow", 
+    "forced", "forest", "forget", "formal", "format", "former", "foster", "fought", 
+    "fourth", "French", "friend", "future", "garden", "gather", "gender", "gentle", 
+    "german", "global", "golden", "ground", "growth", "guilty", "guyana", "habits", 
+    "handle", "happen", "hardly", "headed", "health", "height", "helper", "highly", 
+    "hockey", "holder", "hollow", "honest", "hoping", "horror", "horses", "hotels", 
+    "hourly", "houses", "hugely", "hungry", "hunter", "ignore", "images", "impact", 
+    "import", "indeed", "indoor", "injury", "inside", "intent", "invest", "island", 
+    "itself", "jacket", "jersey", "joined", "joints", "judged", "judges", "junior", 
+    "keeper", "kindly", "knight", "knives", "labels", "labour", "ladder", "lakeside", 
+    "laptop", "larger", "lastly", "lately", "latest", "launch", "lawyer", "layout", 
+    "leader", "league", "leaves", "legacy", "legend", "length", "lesson", "letter", 
+    "levels", "liable", "likely", "linear", "linked", "liquid", "listen", "little", 
+    "living", "loaded", "locals", "locate", "locked", "lonely", "losses", "lowest", 
+    "lumber", "luxury", "mainly", "making", "manage", "manner", "manual", "margin", 
+    "marine", "market", "masses", "master", "matrix", "matter", "mature", "maximum", 
+    "meantime", "medium", "member", "memory", "mental", "merely", "merger", "method", 
+    "middle", "midway", "mighty", "miller", "mining", "minute", "mirror", "misery", 
+    "mobile", "modern", "modify", "module", "moment", "monkey", "months", "mostly", 
+    "mother", "motion", "motors", "mounts", "muscle", "museum", "mutual", "myself", 
+    "narrow", "nation", "native", "nature", "nearby", "nearly", "nights", "nobody", 
+    "normal", "notice", "notion", "number", "object", "obtain", "office", "offset", 
+    "online", "option", "orange", "orders", "origin", "output", "oxford", "packed", 
+    "palace", "parent", "partly", "patent", "people", "period", "permit", "person", 
+    "phrase", "picked", "planet", "player", "please", "plenty", "pocket", "police", 
+    "policy", "prefer", "pretty", "prices", "priest", "prison", "profit", "proper", 
+    "proven", "public", "pursue", "raised", "random", "rarely", "rather", "rating", 
+    "reader", "really", "reason", "recall", "recent", "record", "reduce", "reform", 
+    "regard", "regime", "region", "relate", "relief", "remain", "remote", "remove", 
+    "repair", "repeat", "replay", "report", "rescue", "resort", "result", "retail", 
+    "retain", "return", "reveal", "review", "reward", "rhythm", "ribbon", "riding", 
+    "rights", "rising", "ritual", "robust", "rocket", "rolled", "roughy", "rounds", 
+    "rubber", "rugged", "ruling", "safety", "salary", "sample", "saving", "saying", 
+    "scarcy", "scheme", "school", "screen", "search", "season", "second", "secret", 
+    "sector", "secure", "seeing", "select", "seller", "senior", "series", "server", 
+    "settle", "severe", "sexual", "shades", "shadow", "shared", "shares", "sheets", 
+    "shelf", "shells", "shield", "shifts", "shining", "shipped", "shirts", "shocks", 
+    "should", "showed", "shower", "shrine", "shrubs", "signal", "silent", "silver", 
+    "simple", "simply", "single", "sister", "slight", "slowly", "smooth", "social", 
+    "solely", "sought", "source", "soviet", "speech", "spirit", "spoken", "spread", 
+    "spring", "square", "stable", "stages", "stands", "static", "status", "steady", 
+    "stolen", "strain", "stream", "street", "stress", "strict", "strike", "string", 
+    "strong", "struck", "studio", "submit", "sudden", "suffer", "summer", "summit", 
+    "supply", "surely", "survey", "switch", "symbol", "system", "tables", "tackle", 
+    "taking", "talent", "target", "taught", "tenant", "tender", "tennis", "thanks", 
+    "theory", "thirty", "though", "threat", "thrown", "ticket", "timely", "timing", 
+    "tissue", "titles", "tonight", "topics", "toward", "travel", "treaty", "triple", 
+    "troops", "trophy", "tunnel", "twelve", "twenty", "unable", "unique", "united", 
+    "unless", "unlike", "update", "useful", "valley", "varied", "verify", "vessel", 
+    "victim", "videos", "vision", "visual", "voices", "volume", "walker", "wallet", 
+    "warden", "warmth", "weapon", "weekly", "weight", "wholly", "window", "winner", 
+    "winter", "within", "wonder", "worker", "wright", "writer", "yellow",
+];
+
+function getRandomWord() {
+    let max = words.length;
+    let min = 0;
+    return words[Math.floor(Math.random() * (max - min + 1) + min)];
+};
+
+function scrambleWord(str) {
+    const arr = str.split("");
+
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    };
+
+    return arr.join("");
+};

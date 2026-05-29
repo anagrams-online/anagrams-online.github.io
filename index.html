@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Anagrams</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link href="style/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="home-menu">
+            <div id="special-title"></div>
+            <div id="menu-btn-container">
+                <button id="btn-start" class="btn">Start</button>
+            </div>
+        </div>
+
+        <div id="big-container">
+            <div id="ui-container">
+                <div id="target-word-ui-container">
+                    <p id="score">Score: 0</p>
+                    <div id="target-word-container"></div>
+                </div>
+
+                <div id="main-ui-container">
+                    <div class="center-wrapper">
+                        <p id="alert-msg"></p>
+                        <input id="word-input" type="text" autocomplete="off" inputmode="text" maxlength="6" placeholder="Type here">
+                    </div>
+                    <div id="options-btns">
+                        <button id="reshuffle" class="btn">Shuffle</button>
+                        <button id="give-up" class="btn">View Solution</button>
+                        <button id="new-word" class="btn">New Board</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="word-list-container">
+                <p id="word-list-title">Word List</p>
+                <div id="word-list"></div>
+            </div>
+        </div>
+
+        <p id="version">v0.1.0</p>
+
+        <script src="script/words.js"></script>
+        <script src="script/main.js"></script>
+    </body>
+</html>
